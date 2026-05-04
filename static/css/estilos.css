@@ -1,136 +1,320 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FAVICON -->
-    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
-    
-    <title>Alfa House Rowing Club | Santa Elena</title>
-    
-    <!-- Tailwind para estructura rápida -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tu archivo CSS separado -->
-    <link rel="stylesheet" href="static/css/estilos.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        darkBg: '#0a0a0a'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body>
+/* ===============================
+   VARIABLES
+================================ */
+:root {
+    --gold: #D4AF37;
+    --gold-dark: #AA8811;
+    --santa-verde: #009245;
+    --santa-azul: #005596;
+    --santa-celeste: #39B5E6;
+    --dark-bg: #0a0a0a;
+}
 
-    <!-- Barra de Bandera Superior (Santa Elena) -->
-    <div class="flag-divider"></div>
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- NAVEGACIÓN -->
-    <nav class="p-5 border-b border-white/10 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <!-- Logo del Club -->
-                <img src="static/img/logo.png" alt="Alfa House Logo" class="h-14 drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
-                <div>
-                    <h1 class="text-xl font-bold tracking-tighter leading-none uppercase">Alfa House</h1>
-                    <p class="text-[10px] text-gold tracking-[0.3em] uppercase">Rowing Club</p>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-gold transition">Inicio</a>
-                <a href="noticias.html" class="hover:text-gold transition">Noticias</a>
-                <a href="logros.html" class="hover:text-gold transition">Logros</a>
-                <a href="#contacto" class="border border-gold text-gold px-5 py-2 rounded-sm hover:bg-gold hover:text-black transition">Contacto</a>
-            </div>
-        </div>
-    </nav>
+body {
+    background: var(--dark-bg);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    <!-- HERO SECTION -->
-    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <img src="static/img/hero-rowing.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Rowing">
-        <div class="absolute inset-0 hero-overlay"></div>
-        
-        <div class="relative z-10 text-center px-4">
-            <h2 class="text-5xl md:text-7xl font-black mb-4 gold-gradient italic uppercase">Tradicción y Fuerza</h2>
-            <p class="text-lg md:text-xl font-light tracking-[0.4em] text-gray-300 mb-8 uppercase">Santa Elena, Ecuador</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#noticias">Noticias</a>
-                <a href="#logros">Logros</a>
-            </div>
-        </div>
-    </header>
+/* ===============================
+   CONTENEDOR
+================================ */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 
-    <!-- SECCIÓN NOTICIAS -->
-    <section class="py-20 container mx-auto px-6">
-        <h2 class="text-4xl font-bold uppercase italic mb-12 text-white">Archivo de <span class="text-gold">Noticias</span></h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- NOTICIA RECIENTE: VACACIONAL ATAHUALPA 2026 -->
-            <article class="bg-[#111] border border-gold/30 p-4">
-                <img src="static/img/atahualpa.jpg" class="w-full h-48 object-cover mb-4">
-                <span class="text-gold text-[10px] font-bold uppercase tracking-widest">Evento Reciente</span>
-                <h3 class="text-xl font-bold my-2">Vacacional Atahualpa 2026</h3>
-                <p class="text-gray-400 text-sm mb-4">Gran participación en Ajedrez, Natación y Balonmano. ¡Orgullo de Santa Elena!</p>
-            </article>
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10,10,10,0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-            <!-- Aquí irás moviendo las noticias del index cuando queden antiguas -->
-        </div>
-    </section>
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
 
-    <!-- SECCIÓN DISCIPLINAS -->
-    <section class="py-16 bg-[#0f0f0f]">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-6">
-            <div class="p-8 border-t-2 border-santaVerde bg-[#151515] text-center group hover:bg-santaVerde transition">
-                <h3 class="text-2xl font-black group-hover:text-white">NATACIÓN</h3>
-            </div>
-            <div class="p-8 border-t-2 border-santaAzul bg-[#151515] text-center group hover:bg-santaAzul transition">
-                <h3 class="text-2xl font-black group-hover:text-white">BALONMANO</h3>
-            </div>
-            <div class="p-8 border-t-2 border-santaCeleste bg-[#151515] text-center group hover:bg-santaCeleste transition">
-                <h3 class="text-2xl font-black group-hover:text-white">REMO</h3>
-            </div>
-        </div>
-    </section>
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
 
-    <!-- LOGROS -->
-    <section id="logros" class="py-20 bg-[#050505] border-y border-white/5">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-4xl font-black mb-16 uppercase italic gold-gradient">Logros de Oro</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div>
-                    <span class="text-5xl font-black block mb-2">15</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Títulos</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">08</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Medallas</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">8</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Años</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">100%</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Pasión</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-    <footer class="pt-20">
-        <div class="container mx-auto px-6 pb-10 text-center">
-            <p class="text-gray-500 text-[10px] tracking-widest uppercase">Alfa House Rowing Club &copy; 2026 | Santa Elena, Ecuador</p>
-        </div>
-        <div class="flag-divider"></div>
-    </footer>
+.nav-links a:hover {
+    color: var(--gold);
+}
 
-    <script src="static/js/app.js"></script>
-</body>
-</html>
+/* ===============================
+   BOTONES
+================================ */
+.btn-gold {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn-gold:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--dark-bg));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    letter-spacing: 6px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===============================
+   TEXTOS
+================================ */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+.timeline {
+    border-left: 2px solid var(--gold);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ===============================
+   BANDERA
+================================ */
+.flag-divider {
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        var(--santa-verde) 33%,
+        var(--santa-azul) 33%,
+        var(--santa-azul) 66%,
+        var(--santa-celeste) 66%
+    );
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-sub {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.hero-buttons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: 10px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.disciplina {
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+    background: #151515;
+}
+
+.verde:hover {
+    background: var(--santa-verde);
+}
+
+.azul:hover {
+    background: var(--santa-azul);
+}
+
+.celeste:hover {
+    background: var(--santa-celeste);
+}
+
+.stats span {
+    font-size: 40px;
+    display: block;
+}
+
+.stats p {
+    color: var(--gold);
+    font-size: 12px;
+}
