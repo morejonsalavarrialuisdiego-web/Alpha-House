@@ -3,134 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FAVICON -->
-    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
-    
     <title>Alfa House Rowing Club | Santa Elena</title>
-    
-    <!-- Tailwind para estructura rápida -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tu archivo CSS separado -->
+
+    <!-- CSS PROPIO -->
     <link rel="stylesheet" href="static/css/estilos.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        darkBg: '#0a0a0a'
-                    }
-                }
-            }
-        }
-    </script>
 </head>
+
 <body>
 
-    <!-- Barra de Bandera Superior (Santa Elena) -->
+<!-- BARRA SUPERIOR -->
+<div class="flag-divider"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-content">
+
+        <div class="logo-box">
+            <img src="static/img/logo.png" class="logo">
+            <div>
+                <h1 class="logo-title">Alfa House</h1>
+                <p class="logo-sub">Rowing Club</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="logros.html">Logros</a>
+            <a href="#contacto" class="btn-gold">Contacto</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <img src="static/img/hero-rowing.jpg" alt="Rowing">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h2 class="hero-title gold-gradient">Tradicción y Fuerza</h2>
+        <p class="hero-subtitle">SANTA ELENA, ECUADOR</p>
+
+        <div class="hero-buttons">
+            <a href="#noticias">Noticias</a>
+            <a href="#logros">Logros</a>
+        </div>
+    </div>
+</header>
+
+<!-- NOTICIAS -->
+<section class="section container">
+    <h2 class="title">
+        Archivo de <span class="text-gold">Noticias</span>
+    </h2>
+
+    <div class="grid-3">
+
+        <article class="card">
+            <img src="static/img/atahualpa.jpg">
+            <div class="card-body">
+                <span class="text-gold small">Evento Reciente</span>
+                <h3>Vacacional Atahualpa 2026</h3>
+                <p>
+                    Gran participación en Ajedrez, Natación y Balonmano.
+                    ¡Orgullo de Santa Elena!
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- DISCIPLINAS -->
+<section class="section-dark section">
+    <div class="container grid-3">
+
+        <div class="disciplina verde">NATACIÓN</div>
+        <div class="disciplina azul">BALONMANO</div>
+        <div class="disciplina celeste">REMO</div>
+
+    </div>
+</section>
+
+<!-- LOGROS -->
+<section id="logros" class="section-dark section">
+    <div class="container center">
+
+        <h3 class="hero-title gold-gradient">Logros de Oro</h3>
+
+        <div class="grid-4 stats">
+
+            <div>
+                <span>15</span>
+                <p>Títulos</p>
+            </div>
+
+            <div>
+                <span>08</span>
+                <p>Medallas</p>
+            </div>
+
+            <div>
+                <span>8</span>
+                <p>Años</p>
+            </div>
+
+            <div>
+                <span>100%</span>
+                <p>Pasión</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>
+            Alfa House Rowing Club © 2026 | Santa Elena, Ecuador
+        </p>
+    </div>
     <div class="flag-divider"></div>
+</footer>
 
-    <!-- NAVEGACIÓN -->
-    <nav class="p-5 border-b border-white/10 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <!-- Logo del Club -->
-                <img src="static/img/logo.png" alt="Alfa House Logo" class="h-14 drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
-                <div>
-                    <h1 class="text-xl font-bold tracking-tighter leading-none uppercase">Alfa House</h1>
-                    <p class="text-[10px] text-gold tracking-[0.3em] uppercase">Rowing Club</p>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-gold transition">Inicio</a>
-                <a href="noticias.html" class="hover:text-gold transition">Noticias</a>
-                <a href="logros.html" class="hover:text-gold transition">Logros</a>
-                <a href="#contacto" class="border border-gold text-gold px-5 py-2 rounded-sm hover:bg-gold hover:text-black transition">Contacto</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <img src="static/img/hero-rowing.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Rowing">
-        <div class="absolute inset-0 hero-overlay"></div>
-        
-        <div class="relative z-10 text-center px-4">
-            <h2 class="text-5xl md:text-7xl font-black mb-4 gold-gradient italic uppercase">Tradicción y Fuerza</h2>
-            <p class="text-lg md:text-xl font-light tracking-[0.4em] text-gray-300 mb-8 uppercase">Santa Elena, Ecuador</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#noticias">Noticias</a>
-                <a href="#logros">Logros</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- SECCIÓN NOTICIAS -->
-    <section class="py-20 container mx-auto px-6">
-        <h2 class="text-4xl font-bold uppercase italic mb-12 text-white">Archivo de <span class="text-gold">Noticias</span></h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- NOTICIA RECIENTE: VACACIONAL ATAHUALPA 2026 -->
-            <article class="bg-[#111] border border-gold/30 p-4">
-                <img src="static/img/atahualpa.jpg" class="w-full h-48 object-cover mb-4">
-                <span class="text-gold text-[10px] font-bold uppercase tracking-widest">Evento Reciente</span>
-                <h3 class="text-xl font-bold my-2">Vacacional Atahualpa 2026</h3>
-                <p class="text-gray-400 text-sm mb-4">Gran participación en Ajedrez, Natación y Balonmano. ¡Orgullo de Santa Elena!</p>
-            </article>
-
-            <!-- Aquí irás moviendo las noticias del index cuando queden antiguas -->
-        </div>
-    </section>
-
-    <!-- SECCIÓN DISCIPLINAS -->
-    <section class="py-16 bg-[#0f0f0f]">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-6">
-            <div class="p-8 border-t-2 border-santaVerde bg-[#151515] text-center group hover:bg-santaVerde transition">
-                <h3 class="text-2xl font-black group-hover:text-white">NATACIÓN</h3>
-            </div>
-            <div class="p-8 border-t-2 border-santaAzul bg-[#151515] text-center group hover:bg-santaAzul transition">
-                <h3 class="text-2xl font-black group-hover:text-white">BALONMANO</h3>
-            </div>
-            <div class="p-8 border-t-2 border-santaCeleste bg-[#151515] text-center group hover:bg-santaCeleste transition">
-                <h3 class="text-2xl font-black group-hover:text-white">REMO</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- LOGROS -->
-    <section id="logros" class="py-20 bg-[#050505] border-y border-white/5">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-4xl font-black mb-16 uppercase italic gold-gradient">Logros de Oro</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div>
-                    <span class="text-5xl font-black block mb-2">15</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Títulos</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">08</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Medallas</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">8</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Años</p>
-                </div>
-                <div>
-                    <span class="text-5xl font-black block mb-2">100%</span>
-                    <p class="text-gold text-[10px] tracking-widest uppercase font-bold">Pasión</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="pt-20">
-        <div class="container mx-auto px-6 pb-10 text-center">
-            <p class="text-gray-500 text-[10px] tracking-widest uppercase">Alfa House Rowing Club &copy; 2026 | Santa Elena, Ecuador</p>
-        </div>
-        <div class="flag-divider"></div>
-    </footer>
-
-    <script src="static/js/app.js"></script>
 </body>
 </html>
