@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    
+    <title>Noticias | Alfa House</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="static/css/estilos.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0a0a0a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- BARRA SUPERIOR -->
+<div class="flag-divider"></div>
+
+<!-- NAVBAR -->
+<nav class="p-5 border-b border-white/10 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-50">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <div class="flex items-center gap-4">
+            <img src="static/img/logo.png" class="h-14">
+            <div>
+                <h1 class="text-xl font-bold uppercase">Alfa House</h1>
+                <p class="text-[10px] text-gold tracking-[0.3em] uppercase">Rowing Club</p>
+            </div>
+        </div>
+
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-gold">Inicio</a>
+            <a href="noticias.html" class="text-gold">Noticias</a>
+            <a href="logros.html" class="hover:text-gold">Logros</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative h-[50vh] flex items-center justify-center text-center">
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+
+    <div class="relative z-10">
+        <h2 class="text-5xl md:text-6xl font-black gold-gradient uppercase">
+            Noticias
+        </h2>
+        <p class="text-gray-400 mt-4 tracking-widest">
+            ACTUALIDAD DEL CLUB
+        </p>
+    </div>
+</header>
+
+<!-- SECCIÓN NOTICIAS -->
+<section class="py-20 section-dark">
+    <div class="container mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- NOTICIA PRINCIPAL -->
+            <article class="card">
+                <div class="overflow-hidden">
+                    <img src="static/img/atahualpa.jpg" class="w-full h-56 object-cover">
+                </div>
+
+                <div class="p-6">
+                    <span class="text-gold text-xs uppercase tracking-widest">
+                        Evento 2026
+                    </span>
+
+                    <h3 class="text-xl font-bold my-3 title-hover">
+                        Vacacional Atahualpa 2026
+                    </h3>
+
+                    <p class="text-gray-400 text-sm">
+                        Último evento del club con participación en ajedrez,
+                        natación y balonmano. Una muestra del crecimiento
+                        competitivo de Alfa House en Santa Elena.
+                    </p>
+                </div>
+            </article>
+
+            <!-- HISTORIA -->
+            <article class="card p-6 flex flex-col justify-center">
+                <span class="text-gold text-xs uppercase tracking-widest">
+                    Historia
+                </span>
+
+                <h3 class="text-xl font-bold my-3 title-hover">
+                    Fundación 2018
+                </h3>
+
+                <p class="text-gray-400 text-sm">
+                    Alfa House Rowing Club nace en 2018 con la misión de
+                    formar atletas y fortalecer el deporte en la provincia
+                    de Santa Elena.
+                </p>
+            </article>
+
+            <!-- EXTRA (puedes duplicar esto para más noticias) -->
+            <article class="card p-6 flex flex-col justify-center border-white/10">
+                <span class="text-gold text-xs uppercase tracking-widest">
+                    Próximamente
+                </span>
+
+                <h3 class="text-xl font-bold my-3 title-hover">
+                    Nuevos Eventos
+                </h3>
+
+                <p class="text-gray-400 text-sm">
+                    Alfa House continúa preparándose para nuevas competencias
+                    y desafíos deportivos durante el año.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-20">
+    <div class="container mx-auto px-6 pb-10 text-center">
+        <p class="text-gray-500 text-[10px] tracking-widest uppercase">
+            Alfa House Rowing Club © 2026 | Santa Elena, Ecuador
+        </p>
+    </div>
+    <div class="flag-divider"></div>
+</footer>
+
+</body>
+</html>
