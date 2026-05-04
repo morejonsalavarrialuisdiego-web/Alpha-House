@@ -318,3 +318,19 @@ footer {
     color: var(--gold);
     font-size: 12px;
 }
+
+/* ===============================
+   TEXTO DORADO DEGRADADO
+================================ */
+.gold-gradient {
+    background: linear-gradient(45deg, #FFD700, #FFF3B0, #C9A227);
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    display: inline-block;
+}
+
